@@ -14,28 +14,13 @@ class Covid
     private float $couv_dose2;
 
     /**
-     * Fonction permettant de récupérer toutes les vaccinations
-     * return array
+     * Fonction statique nous permettant de récupérer toutes les vaccinations
+     * @return array Tableau associatif contenant toutes les vaccinations
      */
-    function getAllVaccinations(): array
+    public static function getAllVaccinations(): array
     {
-        // informations de connexion à la base de données
-        $host = 'localhost';
-        $db = 'exos-afpa';
-        $user = 'covid';
-        $password = 'covid';
-
-        $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
-
-        try {
-            // création d'une instannce de la classe PDO
-            $pdo = new PDO($dsn, $user, $password);
-            if ($pdo) {
-                echo "Connected to the $db database successfully!";
-            }
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
+        // j'appelle la méthode getInstancePDO() de la classe Database
+        $pdo = Database::getInstancePDO();
 
         // requête SQL pour récupérer toutes les vaccinations
         $sql = "

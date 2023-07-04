@@ -1,5 +1,5 @@
-<?php include "components/head.php" ?>
-<?php include "components/navbar.php" ?>
+<?php include "templates/head.php" ?>
+<?php include "templates/navbar.php" ?>
 
 <h1>AFPA COVID</h1>
 <h2>Accueil</h2>
@@ -10,4 +10,4 @@
 
 <hr>
 
-<?php include "components/footer.php" ?>
+<?php include "templates/footer.php" ?>

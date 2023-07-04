@@ -1,5 +1,5 @@
-<?php include "components/head.php" ?>
-<?php include "components/navbar.php" ?>
+<?php include "templates/head.php" ?>
+<?php include "templates/navbar.php" ?>
 
 <h1>AFPA COVID</h1>
 <h2>Suivi des vaccinations par région</h2>
@@ -20,7 +20,7 @@
 
         <?php
         // je boucle sur le tableau $result
-        foreach ($result as $row) { ?>
+        foreach ( Covid::getAllVaccinations() as $row) { ?>
             <tr>
                 <td><?= $row['region_id'] ?></td>
                 <td><?= $row['region_name'] ?></td>
@@ -38,4 +38,4 @@
 
 <hr>
 
-<?php include "components/footer.php" ?>
+<?php include "templates/footer.php" ?>
