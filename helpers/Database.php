@@ -4,7 +4,7 @@ class Database
 {
     /**
      * Méthode qui retourne une instance de la classe PDO
-     * @return objet PDO
+     * @return object PDO
      */
     public static function getInstancePDO(): object
     {
