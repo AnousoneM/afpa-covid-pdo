@@ -1,10 +1,7 @@
 <?php include "templates/head.php" ?>
-<?php include "templates/navbar.php" ?>
 
-<h1>AFPA COVID</h1>
-<h2>Suivi des vaccinations par région</h2>
-
-<hr>
+<h1 class="text-center py-5 bg-dark text-white"><i class="bi bi-universal-access"></i> AFPA COVID TRACKER <i class="bi bi-virus"></i></h1>
+<h2 class="text-center my-3">Suivi des vaccinations par région</h2>
 
 <table class="table table-striped">
     <thead>
@@ -16,7 +13,6 @@
         </tr>
     </thead>
     <tbody>
-
 
         <?php
         // je boucle sur le tableau $result
@@ -33,9 +29,6 @@
     </tbody>
 </table>
 
-
 <a class="btn btn-outline-secondary" href="../index.php">Retour accueil</a>
-
-<hr>
 
 <?php include "templates/footer.php" ?>
