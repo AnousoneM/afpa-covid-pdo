@@ -6,38 +6,35 @@
 
 <hr>
 
-<table class="table">
+<table class="table table-striped">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th>Région ID</th>
+            <th>Nom de la région</th>
+            <th>Total 1ère dose</th>
+            <th>Total 2ème dose</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-        </tr>
+
+
+        <?php
+        // je boucle sur le tableau $result
+        foreach ($result as $row) { ?>
+            <tr>
+                <td><?= $row['region_id'] ?></td>
+                <td><?= $row['region_name'] ?></td>
+                <td><?= $row['dose1_total'] ?></td>
+                <td><?= $row['dose2_total'] ?></td>
+            </tr>
+
+        <?php } ?>
+
     </tbody>
 </table>
 
 
-<a href="../index.php">Retour accueil</a>
+<a class="btn btn-outline-secondary" href="../index.php">Retour accueil</a>
 
 <hr>
 

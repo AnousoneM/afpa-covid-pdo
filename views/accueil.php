@@ -6,7 +6,7 @@
 
 <hr>
 
-<a href="../controllers/controller-suivi.php">Suivi des vaccinations</a>
+<a class="btn btn-outline-secondary" href="../controllers/controller-suivi.php">Suivi des vaccinations</a>
 
 <hr>
 
