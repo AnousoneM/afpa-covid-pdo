@@ -2,7 +2,7 @@
 
 class CovidVaccin
 {
-    // détermine les attributs de la classe qui correspondent aux colonnes de la table covid
+    // Les attributs de la classe correspondent aux colonnes de la table covidVaccin
     private int $id;
     private string $dep_code;
     private int $vaccin;
@@ -40,7 +40,9 @@ class CovidVaccin
         INNER JOIN `lpecom_covid_vaccin_type` ON `lpecom_covid_vaccin`.`vaccin` = `lpecom_covid_vaccin_type`.`id`
         GROUP BY `dep_code`";
 
+        // nous utilisons la méthode query() de l'objet PDO pour exécuter notre requête SQL
         $pdo_statement = $pdo->query($sql);
+        // nous utilisons la méthode fetchAll() de l'objet PDOStatement pour récupérer le résultat de la requête sous forme de tableau associatif
         $result = $pdo_statement->fetchAll(PDO::FETCH_ASSOC);
 
         return $result;
